@@ -1,4 +1,4 @@
-const ModeloPessoa = require('../models/Pessoas');
+const ModeloPessoa = require('../models/Pessoas.js');
 
 class ControllerPessoa {
   static async Cadastro(req, res) {
