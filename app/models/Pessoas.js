@@ -8,7 +8,10 @@ class Pessoas {
 
   static async listar(){
     const docref = await db.collection('pessoas').get()
-    return docref.docs;
+    return docref.docs.map(doc => ({
+        id: doc.id,                 
+        ...doc.data() 
+    }));
   }
 }
 
