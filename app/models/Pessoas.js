@@ -5,6 +5,8 @@ class Pessoas {
     const docRef = await db.collection('pessoas').add(data);
     return docRef.id;
   }
+
+
 }
 
 module.exports = Pessoas;
