@@ -6,7 +6,10 @@ class Pessoas {
     return docRef.id;
   }
 
-
+  static async listar(){
+    const docref = await db.collection('pessoas').get()
+    return docref.docs;
+  }
 }
 
 module.exports = Pessoas;

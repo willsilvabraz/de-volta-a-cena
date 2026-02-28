@@ -15,7 +15,10 @@ class ControllerPessoa {
     }
   }
 
-
+  static async listar(req, res){
+    const resp = await ModeloPessoa.listar();
+    res.json({resp});
+  }
 }
 
 module.exports = ControllerPessoa;
