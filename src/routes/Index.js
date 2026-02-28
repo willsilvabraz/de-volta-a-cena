@@ -1,7 +1,7 @@
 const routes = require('express').Router();
-const routerPessoas = require('./Pessoas')
+const routerPessoas = require('../controller/Pessoas')
 
-routes.use('/pessoas', routerPessoas);
+routes.use('/pessoas', routerPessoas.Cadastro);
 
 
 module.exports = routes;
