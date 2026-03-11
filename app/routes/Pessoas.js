@@ -1,11 +1,13 @@
 const router = require('express').Router();
 const ControllerPessoa = require('../controller/Pessoas.js')
+const authSession = require('../middlewares/authSession');
 
-router.get('/', (req, res) => {
+
+router.get('/', authSession, (req, res) => {
     ControllerPessoa.listar(req, res);
 });
 
-router.post('/', (req,res)=>{
+router.post('/', authSession, (req,res)=>{
     ControllerPessoa.Cadastro(req, res)
 });
 

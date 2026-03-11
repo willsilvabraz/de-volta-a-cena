@@ -7,7 +7,7 @@ const routes = require('./app/routes/Index.js');
 const app = express();
 
 app.use(session({
-  secret: "segredo-super-forte",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
 }));
