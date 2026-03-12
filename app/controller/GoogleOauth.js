@@ -1,5 +1,5 @@
 const { google } = require('googleapis');
-const oauth2Client = require('../config/googleAuth');
+const oauth2Client = require('../config/GoogleOauth');
 
 exports.googleAuth = (req, res) => {
 
