@@ -34,6 +34,8 @@ exports.githubCallback = async (req, res) => {
     }
   });
 
+  req.session.user = user.data;
+
   res.json(user.data);
 
 };
